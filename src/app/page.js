@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     try {
       (async () => {
-        let res = await fetch("https://tc-backend.onrender.com/data");
+        let res = await fetch("https://tc-lottery-backend-vercel.vercel.app/data");
         res = await res.json();
         let { isStart , data, timer} = res;
         set_isStarted(isStart);
@@ -36,7 +36,7 @@ export default function Home() {
 
     try {
       (async () => {
-        let res = await fetch("https://tc-backend.onrender.com/start", {
+        let res = await fetch("https://tc-lottery-backend-vercel.vercel.app/start", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -65,7 +65,7 @@ export default function Home() {
     if (!password) return toast.warn("Please Enter Password");
     try {
       (async () => {
-        let res = await fetch("https://tc-backend.onrender.com/stop", {
+        let res = await fetch("https://tc-lottery-backend-vercel.vercel.app/stop", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
