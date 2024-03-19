@@ -16,9 +16,8 @@ export default function Home() {
   useEffect(() => {
     try {
       (async () => {
-        let res = await fetch("http://localhost:5500/data");
+        let res = await fetch("https://tc-backend.onrender.com/data");
         res = await res.json();
-        // console.log(res);
         let { isStart , data, timer} = res;
         set_isStarted(isStart);
         set_data(data)
@@ -37,7 +36,7 @@ export default function Home() {
 
     try {
       (async () => {
-        let res = await fetch("http://localhost:5500/start", {
+        let res = await fetch("https://tc-backend.onrender.com/start", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -66,7 +65,7 @@ export default function Home() {
     if (!password) return toast.warn("Please Enter Password");
     try {
       (async () => {
-        let res = await fetch("http://localhost:5500/stop", {
+        let res = await fetch("https://tc-backend.onrender.com/stop", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
