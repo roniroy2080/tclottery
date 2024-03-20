@@ -98,6 +98,8 @@ export default function Home() {
       <div style={{ height: "70vh" }}>
       <span style={{display:'flex',justifyContent:'center',marginTop:'0.75rem'}}> RUNNING : {timer} </span>
       <span style={{display:'flex',marginLeft : '1rem',marginTop:'0.75rem'}}> Error Message : { data ? data.Error : 'No Error' } </span>
+      <span style={{display:'flex',marginLeft : '1rem',marginTop:'0.75rem'}}> Last Updated : { data ? data.Date : 'Updating Soon' } </span>
+
         <div
           style={{
             justifyContent: "center",
