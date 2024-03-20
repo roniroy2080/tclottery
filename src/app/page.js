@@ -97,6 +97,7 @@ export default function Home() {
       <Navbar />
       <div style={{ height: "70vh" }}>
       <span style={{display:'flex',justifyContent:'center',marginTop:'0.75rem'}}> RUNNING : {timer} </span>
+      <span style={{display:'flex',marginLeft : '1rem',marginTop:'0.75rem'}}> Error Message : { data ? data.Error : 'No Error' } </span>
         <div
           style={{
             justifyContent: "center",
